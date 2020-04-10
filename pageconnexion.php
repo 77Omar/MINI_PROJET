@@ -28,7 +28,10 @@
    <p><input type="text" name="password" placeholder="    password" class="password"></p>
    <p><input type="submit" value="connexion" placeholder="     |  connexion" class="connexion" name="btn"></p>
    </form>
-   <p><link rel="stylesheet" href="#"><h5>S'inscrire pour jouer?</h5></p>
+   
+   <p><a href="#" class="href"><h5>S'inscrire pour jouer?</h5></a></p>
+
+   
   </div>
  </div>
 </div>
