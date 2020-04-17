@@ -4,6 +4,7 @@ if(!isset($_SESSION['prenom'])){
     echo "Vous n'etes pas connectés!";
     header("Location:pageconnexion.php");
     exit;
+    
 }
 ?>
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ if(!isset($_SESSION['prenom'])){
         <div id="logo">
          <img src="images/logo-QuizzSA.png" alt="">
         </div>
-       <h2>Le plaisir de jouer</h2>
+        <h2>Le plaisir de jouer</h2>
       </div>
 
 <div class="forme">
@@ -34,32 +35,49 @@ if(!isset($_SESSION['prenom'])){
 
    <div class="menu">     
    <form action="" method="post" id="creationpageadmin">
-        <div class="avatar">
-           <img src="<?=$_SESSION['avatar']?>" alt="">
-        </div>
-        <?=$_SESSION['prenom']?>
-  <br><div class="partie1">
-  <br><br><br><br><br><br><p><a href="#" class="href"><h3>Liste Questions</h3></a></p>
-  <img src="images/ic-liste.png" alt="" class="liste">
+       
+         
+<div class="borderone">
+  <div class="avatar">
+    <img src="<?=$_SESSION['avatar']?>" alt="">
   </div>
-  <br><div class="partie2">
-       <p><a href="#" class="href"><h3>Créer Admin</h3></a></p>
-       <img src="images/ic-ajout-active.png" alt="" class="liste">
-  </div>
-  <br><div class="partie3">
-      <a href="#" class="href"><h3>Liste Joueur</h3></a></p>
-       <img src="images/ic-liste.png" alt="" class="listetwo">
-  </div>
-  <br><div class="partie4">
-  <p><a href="#" class="href"><h3>Créer Admin</h3></a></p>
-       <img src="images/ic-ajout.png" alt="" class="liste">
-      </div>
+        <?=$_SESSION['prenom']?><br>
+        <?=$_SESSION['nom']?>
+</div> 
 
+<div class="global">
+    <a href="#" id="lister">
+        <h3>Liste Questions</h3>
+        <img src="images/ic-liste.png" alt="" class="liste">
+    </a>
+    <br><a href="#" id="admin">
+        <h3>Créer Admin</h3>
+        <img src="images/ic-ajout-active.png" alt="" class="liste">
+    </a>
+    <br><a href="#" id="joueur">
+        <h3>Liste Joueur</h3>
+        <img src="images/ic-liste.png" alt="" class="listetwo">
+    </a>
+    <br><a href="#"  id="question">
+        <h3>Créér Questions</h3>
+        <img src="images/ic-ajout.png" alt="" class="liste">
+    </a>
+
+</div>
    </form>
-     
-   </div>
-  </div>
+</div>
+<!--PageBlanc-->
+<div class="leftmenu" id="response">
+
+
+
+ </div>
+<!--Fin-->
+
+</div>
  </div>
 </div>
+<script src="Ajaxhr.js">
+</script>
 </body>
 </html>

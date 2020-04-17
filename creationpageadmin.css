@@ -27,14 +27,15 @@
     border-radius: 10px;
 }
 .menu{
-    width: 40%;
-    height: 660px;
+    width: 43%;
+    height: 565px;
     /* background-color: whitesmoke; */
     margin-left: 1%;
     border-radius: 16px;
-    margin-top: 7%;
+    margin-top: 11%;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
+    float: left;
 }
 .one {
     margin-top: -2%;
@@ -69,7 +70,7 @@
 }
 .two h2{
     color: white;
-    margin-top: -26px;
+    margin-top: -45px;
 }
 .btn1{
    margin-left: 950px;
@@ -112,10 +113,17 @@ font-size: 23px;
 
 } 
 .href{
-    margin-top: 1px;
+    top: -24px;
+    color: grey;
+    font-size: 20px;
+    position: relative;
+    text-decoration: none;
+}
+a{
+    top: 0px;
     text-decoration: none;
     color: grey;
-    font-size: 33px;
+    font-size: 20px;
 }
 .liste{
     margin-left: 394px;
@@ -123,13 +131,18 @@ font-size: 23px;
     margin-top: -54px;
     position: relative;
     position: absolute;
+    text-decoration: none;
+}
+.global{
+    text-decoration: none;
 }
 .listetwo{
     margin-left: 394px;
     width: 41px;
-    margin-top: -73px;
+    margin-top: -52px;
     position: relative;
     position: absolute;
+    text-decoration: none;
 }
 .avatar{
     width: 20%;
@@ -142,12 +155,306 @@ font-size: 23px;
 }
 
 .avatar img{
-    width: 11%;
-    height: 20%;
+    width: 25%;
+    height:74%;
     border-radius: 50%;
     position: absolute;
-    margin-left: 208px;
+    margin-left: -32px;
     margin-top: 44px;
 }
+.leftmenu{
+    width: 55%;
+    height: 757px;
+    margin-top: 1%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    float: right;
+    position: absolute;
+    position: relative;
+}
 
+.right{
+    float: right;
+    border: 2px solid rgb(135, 203, 235);
+    width: 92%;
+    height: 595px;
+    margin-top: 5%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 19px;
+    margin-right: 30px;
+    position: relative;
+    top: -8px;
+}
+.border{
+   /* border: 1px solid black;*/
+    border-radius: 10px;
+    width: 97%;
+    height: 60px;
+    margin-left: 9px;
+    color:silver;
+    text-align: center;
+}
+#nbre{
+    font-size: 24px;
+    top: 15px;
+    position: relative;
+}
+#nbreto{
+    font-size: 24px;
+    top: 45px;
+    position: relative;
+}
+.number{
+    width: 10%;
+    height: 35px;
+    position: relative;
+    top: 10px
+}
+.ok{
+    background-color: rgb(135, 203, 235);
+    height: 44px;
+    width: 44px;
+    position: relative;
+    top: 10px;
+    border: 1px solid darkturquoise;
+    border-radius: 5px;
+    color: white;
+    font-size: 19px;
+}
+.borderone{
+    border-radius: 10px;
+    width: 100%;
+    height: 160px;
+    margin-left: 1px;
+    text-align: center;
+    top: -75px;
+    position: relative;
+    background-color: rgb(135, 203, 235);
+    font-size: 30px;
+    color: white;
+ }
+ .nom{
+    position: relative;
+    color: silver;
+    float: left;
+    margin-left: -5%;
+    font-size: 35px;
+    top: -14px
+ }
+ .nom ul{
+    list-style: none;
+}
 
+ .prenom{
+    position: relative;
+    color: silver;
+    float: left;
+    margin-left: 15%;
+    font-size: 35px;
+    top: -14px
+ }
+ .prenom ul{
+     list-style: none;
+ }
+ .score{
+    position: relative;
+    color: silver;
+    float: right;
+    margin-right: 15%;
+    font-size: 35px;
+    top: -14px;
+ }
+ .score ul{
+     list-style: none;
+ }
+ 
+ #nbretree{
+    font-size: 32px;
+    top: 30px;
+    position: relative;
+    color: rgb(135, 203, 235);
+    margin-right: 19%;
+ }
+.type h2{
+    color: gray;
+    float: left;
+    margin-left: -107px;
+    top: 25px;
+    position: relative;
+}
+.type{
+    width: 80%;
+    height: 130px;
+    color: 2px solid silver;
+    border-radius: 3px;
+    margin-left: 108px;
+    background-color: whitesmoke;
+    top: 14px;
+    position: relative;
+}
+.typrea{
+    width: 99%;
+    height: 130px;
+    color: 2px solid silver;
+    border-radius: 3px;
+    margin-left: 1px;
+    background-color: whitesmoke;
+    top: -1px;
+    position: relative;
+}
+.types h2{
+    color: gray;
+    float: left;
+    margin-left: 5px;
+    top: 50px;
+    position: relative;
+}
+.num{
+    margin-top: 66px;
+    width: 12%;
+    height: 30px;
+    margin-left: 10px;
+}
+.selec h2{
+    color: gray;
+    float: left;
+    margin-left: 5px;
+    top: 50px;
+    position: relative;
+}
+.select{
+    width: 60%;
+    height: 55px;
+    color: 2px solid silver;
+    border-radius: 3px;
+    margin-left: 170px;
+    background-color: whitesmoke;
+    top: -37px;
+    position: relative;
+}
+.ajout{
+    width: 10%;
+    height: 58px;
+    top: -13px;
+    position: relative;
+}
+
+ /*Partie creation admin*/
+ #prenom{
+    width: 48%;
+    height: 45px;
+    margin-left: 16px;
+    border-radius: 10px;
+    float: left;
+    margin-top: 3%;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+#nom{
+    width: 48%;
+    height: 45px;
+    margin-left: 16px;
+    border-radius: 10px;
+    float: left;
+    margin-top: 3%;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+#login{
+    width: 48%;
+    height: 45px;
+    margin-left: 16px;
+    border-radius: 10px;
+    float: left;
+    margin-top: 3%;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+#password{
+    width: 48%;
+    height: 45px;
+    margin-left: 16px;
+    border-radius: 10px;
+    float: left;
+    margin-top: 3%;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+#confirm_password{
+    width: 48%;
+    height: 45px;
+    margin-left: 16px;
+    border-radius: 10px;
+    float: left;
+    margin-top: 3%;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+#text{
+    margin-left: -309px;
+    font-size: 16px;
+    margin-top: 8px;
+    position: relative;
+    color:gray;
+}
+
+#text1{
+    margin-left: -309px;
+    font-size: 16px;
+    margin-top: 8px;
+    position: relative;
+    color:gray;
+}
+#lign{
+    width: 74%;
+    height: 0px;
+    border-radius: 23px;
+
+}
+.connection {
+    width: 16%;
+    height: 31px;
+    margin-right: 452px;
+    border-radius: 10px;
+    float: right;
+    background-color: rgb(135, 220, 235);
+    margin-top: -4%;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: white;
+}
+.avatar {
+    margin-left: 32px;
+    font-size: 21px;
+    float: left;
+
+}
+#avatar {
+    width: 20%;
+    height: 56px;
+    margin-right: 306px;
+    border-radius: 2px;
+    float: right;
+    margin-top: -10%;
+    font-size: 13px;
+}
+.avatar_joueur img {
+    width: 50%;
+    height: 50%;
+    border-radius: 60%;
+    border: 2px solid darkturquoise;
+}
+.avatar_joueur {
+    
+    border-radius: 106px;
+    width: 352px;
+    height: 315px;
+    margin-top: -677px;
+    margin-left: 443px;
+   
+}
