@@ -94,7 +94,7 @@ $message=""; //affichage les messages d'erreurs!
     </div>
     <div class="input-form">
       <button type="submit" class="btn-form" name="btn" id="">Connexion</button>
-      <a href="#" class="link-form">S'inscrire pour jouer</a>
+      <a href="creationcompteuser.php" class="link-form">S'inscrire pour jouer</a>
     </div>
 
   </form>

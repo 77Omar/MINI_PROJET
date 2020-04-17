@@ -13,7 +13,7 @@
 <label for=""><h1>S'INSCRIRE</h1></label>
 <label for=""><p>Pour proposer des quizz</p></label>
 
-<form action="validationuser.php" method="post" id="creationcompteuser">
+<form action="" method="post"  enctype="multipart/form-data" id="creationcompteuser">
 <div id=lign>
  <input type="text" id="lign" name="lign">
 </div>
@@ -46,7 +46,7 @@
 <label for="avatar" class="avatar">Avatar</label>
 <!--<p><input type="submit" value="Choisir un fichier" placeholder="Choisir un fichier" class="connexion" name="btn"></p>-->
 <p><input type="submit" value="Créer compte" placeholder="Créer compte" class="connection" name="btn"></p><br>
-<input type="file" name="avatar" id="avatar" accept=".jpg, .JPG, .jpeg, .png, .PNG"
+<input type="file" name="avatare" id="avatar" accept=".jpg, .JPG, .jpeg, .png, .PNG"
 onchange="document.getElementById('img').src=window.URL.createObjectURL(this.files[0])">
 </br> 
 </div>
@@ -60,3 +60,14 @@ onchange="document.getElementById('img').src=window.URL.createObjectURL(this.fil
 
 </body>
 </html>
+
+
+<?php
+
+if(isset($_FILES['avatare'])){
+    $name_file=$_FILES['avatare']['name'];
+    $tmp_name=$_FILES['avatare']['tmp_name'];
+    $local_image= "picture/";
+    move_uploaded_file( $tmp_name,$local_image.$name_file);
+}
+?>

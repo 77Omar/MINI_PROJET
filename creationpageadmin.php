@@ -34,7 +34,7 @@ if(!isset($_SESSION['prenom'])){
        </div>
 
    <div class="menu">     
-   <form action="" method="post" id="creationpageadmin">
+   <form action="" method="post" enctype="multipart/form-data" id="creationpageadmin">
        
          
 <div class="borderone">
