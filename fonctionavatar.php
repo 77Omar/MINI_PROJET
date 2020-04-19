@@ -1,4 +1,4 @@
-<?php
+<?php 
 function Avatar(){
     if(isset($_FILES['avatare'])){
         $name_file=$_FILES['avatare']['name'];

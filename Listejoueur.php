@@ -5,12 +5,14 @@ if(isset($_GET['page'])){
   if($_GET['page']=="Listejoueur"){
     foreach ($tab_json as $value){
      if($value['role']=="player"){
-      
+      $tab[]= array(
+        "prenom"=> $value["prenom"],
+        "nom"=> $value["nom"],
+      );
      }
-  }
+   }
+ }
 }
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,9 +25,9 @@ if(isset($_GET['page'])){
 <body>
     
 <!--<div class="leftmenu">-->
-    <div class="border">
-        <label for="" id="nbreto">LISTE DES JOUEURS PAR SCORE</label>
-    </div>
+<div class="border">
+  <label for="" id="nbreto">LISTE DES JOUEURS PAR SCORE</label>
+</div>
 <div class="right">
 
 <table>
@@ -34,16 +36,15 @@ if(isset($_GET['page'])){
 <th>nom</th>
 <th>Score</th>
 </tr>
-<tr>
-  <td>Omar</td>
-  <td>Omar</td>
-  <td>100points</td>
-</tr>
-<tr>
-  <td>faye</td>
-  <td>faye</td>
-  <td>200points</td>
-</tr>
+
+<?php
+foreach($tab as $key){
+ echo '<tr>';
+   echo '<td>'.$key['prenom'].'</td>';
+   echo '<td>'.$key['nom'].'</td>';
+ echo '</tr>';
+}
+?>
 </table>
 
   </div>
