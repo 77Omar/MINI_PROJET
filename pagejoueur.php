@@ -36,8 +36,10 @@ if(!isset($_SESSION['prenom'])){
     
        <div class="avatar"> 
            <img src="<?=$_SESSION['avatar']?>" alt="" >
+           <p><?=$_SESSION['prenom']?><br>
+        <?=$_SESSION['nom']?></p>
         </div>
-        <!-- <--?=$_SESSION['prenom']?>-->
+        
        </div>
 
    <div class="menu">     

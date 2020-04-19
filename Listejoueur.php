@@ -1,3 +1,17 @@
+<?php
+ $tab_json = json_decode(file_get_contents("fichierJSON.json"),true);
+ $tabjouer=[];
+if(isset($_GET['page'])){
+  if($_GET['page']=="Listejoueur"){
+    foreach ($tab_json as $value){
+     if($value['role']=="player"){
+      
+     }
+  }
+}
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,23 +28,23 @@
     </div>
 <div class="right">
 
-  <div class="nom">
-    <ul>
-     <li>Nom</li>
-    </ul>
-  </div>
-  
-  <div class="prenom">
-    <ul>
-     <li>Prenom</li>
-    </ul>
-  </div>
-
-  <div class="score">
-    <ul>
-     <li>Score</li>
-    </ul>
-  </div>
+<table>
+<tr>
+<th>Prenom</th>
+<th>nom</th>
+<th>Score</th>
+</tr>
+<tr>
+  <td>Omar</td>
+  <td>Omar</td>
+  <td>100points</td>
+</tr>
+<tr>
+  <td>faye</td>
+  <td>faye</td>
+  <td>200points</td>
+</tr>
+</table>
 
   </div>
  <!--</div>-->

@@ -40,25 +40,27 @@ if(!isset($_SESSION['prenom'])){
 <div class="borderone">
   <div class="avatar">
     <img src="<?=$_SESSION['avatar']?>" alt="">
+    
   </div>
-        <?=$_SESSION['prenom']?><br>
-        <?=$_SESSION['nom']?>
+  <p><?=$_SESSION['prenom']?><br>
+        <?=$_SESSION['nom']?></p>
+       
 </div> 
 
 <div class="global">
-    <a href="#" id="lister">
+    <a href="creationpageadmin.php?page=Listequestion"> <!--?page(parametre)-->
         <h3>Liste Questions</h3>
         <img src="images/ic-liste.png" alt="" class="liste">
     </a>
-    <br><a href="#" id="admin">
+    <br><a href="creationpageadmin.php?page=Admin">
         <h3>Créer Admin</h3>
         <img src="images/ic-ajout-active.png" alt="" class="liste">
     </a>
-    <br><a href="#" id="joueur">
+    <br><a href="creationpageadmin.php?page=Listejoueur">
         <h3>Liste Joueur</h3>
         <img src="images/ic-liste.png" alt="" class="listetwo">
     </a>
-    <br><a href="#"  id="question">
+    <br><a href="creationpageadmin.php?page=creerquestion">
         <h3>Créér Questions</h3>
         <img src="images/ic-ajout.png" alt="" class="liste">
     </a>
@@ -66,18 +68,35 @@ if(!isset($_SESSION['prenom'])){
 </div>
    </form>
 </div>
+
 <!--PageBlanc-->
 <div class="leftmenu" id="response">
+<!---->
 
+<?php
+if(isset($_GET["page"])){
+   if($_GET['page']=="Listequestion"){
+     require_once('Listequestion.php');
+   }
+   elseif($_GET['page']=="Listejoueur"){
+    require_once('Listejoueur.php');
+   }
+   elseif($_GET['page']=="Admin"){
+    require_once('Creeradmin.php');
+   }
+   elseif($_GET['page']=="creerquestion"){
+   require_once('creerquestion.php');
+   }
+}
+?>
 
-
- </div>
+<!---->
+</div>
 <!--Fin-->
 
 </div>
  </div>
 </div>
-<script src="Ajaxhr.js">
-</script>
+<!--<script src="Ajaxhr.js"></script>-->
 </body>
 </html>

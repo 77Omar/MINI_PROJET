@@ -8,7 +8,7 @@ $message=""; //affichage les messages d'erreurs!
  if(isset($_POST['btn'])){
     $tab_json = json_decode(file_get_contents("fichierJSON.json"),true);
 
-    foreach ($tab_json["users"] as $value){
+    foreach ($tab_json as $value){
         //var_dump($value['password']);
         if($value['login']==$_POST['login'] && $value['password']==$_POST['password']){
            $_SESSION['prenom']=$value['prenom'];
@@ -94,7 +94,7 @@ $message=""; //affichage les messages d'erreurs!
     </div>
     <div class="input-form">
       <button type="submit" class="btn-form" name="btn" id="">Connexion</button>
-      <a href="creationcompteuser.php" class="link-form">S'inscrire pour jouer</a>
+      <a href="creationcompteuser.php?page=Users" class="link-form">S'inscrire pour jouer</a>
     </div>
 
   </form>
@@ -108,48 +108,6 @@ $message=""; //affichage les messages d'erreurs!
 </body>
 </html>
 
-<script>
-   const inputs=document.getElementsByTagName("input");
-  for(input of inputs){ 
-    input.addEventListener("keyup",function(e){
-     if(e.target.hasAttribute("error")){
-        var idDivError=e.target.getAttribute("error");
-        document.getElementById(idDivError).innerText=""
-     }
-    })
-
-  }
-
-     document.getElementById("form-connexion").addEventListener("submit",function(e){
-      //pour ne pas recharger la page on va utiliser le return et le preventDefault()
-      const inputs=document.getElementsByTagName("input"); //c'est pour recuperer une inpute
-      //le boucle for(--of--) permet de parcourir
-      var error=false; //pas d'erreur
-      for(input of inputs){
-       
-        //if() permet de verifier si l'input ne contient op une attribut erreur
-         if(input.hasAttribute("error")){
-             //recupere idDivError stocké o nivo du if() avec GEt o lieu de has
-             var idDivError=input.getAttribute("error")
-             if(!input.value){ 
-             document.getElementById(idDivError).innerText="Ce champs est obligatoire"
-             error=true //g trouvé une erreur
-            }
-           //alert("ok")
-           
-         }
-      }
-      if(error){
-        e.preventDefault(); //garde le comportement par defaut
-      }
-      return false; //lui dit de ne po recharger la page
-    })
-
- setTimeout(() => {
-    document.getElementById("messager").innerHTML='';
-                     
- }, 1000);
-
-           
+<script src="function.js">
 
 </script>
