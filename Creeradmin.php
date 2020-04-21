@@ -49,7 +49,7 @@ if(isset($_POST['btn'])){
 </div> 
 <div class="input-form">
 <label for="password" id="text">Confirmer Password</label>
-<input type="password" id="confirm_password" name="password" error="error-5">
+<input type="password" id="confirm_password" name="confirmpassword" error="error-5">
 <div class="error-form" id="error-5"></div>
 </div> 
 
@@ -74,6 +74,6 @@ onchange="document.getElementById('img').src=window.URL.createObjectURL(this.fil
 </body>
 </html>
 
-<script src="function.js">
+<script src="function.js"></script>
  
-</script>
+

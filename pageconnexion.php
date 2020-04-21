@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['prenom'])){
+if(isset($_SESSION['role'])){
     header("Location:creationpageadmin.php");//permet de redriger
     exit;
 }
@@ -15,6 +15,7 @@ $message=""; //affichage les messages d'erreurs!
            $_SESSION['nom']=$value['nom'];
            $_SESSION['login']=$value['login'];
            $_SESSION['password']=$value['password'];
+           $_SESSION['score']=$value['score'];
            $_SESSION['avatar']=$value['avatar'];
             if($value['role']=='admin'){
               $_SESSION['role']=$value['role'];

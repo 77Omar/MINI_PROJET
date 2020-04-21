@@ -31,7 +31,7 @@ require_once("fonctions.php");
        <label for=""><h1>S'INSCRIRE</h1></label>
        <label for=""><p>Pour tester votre niveau de culture generale</p></label>
        </div>
- 
+ <!--enctype est 1attribut ki permet de specifier l'encodage pr 1envoi de type post -->
    <form action="" method="post" enctype="multipart/form-data" id="form-connexion">
        <div id=lign>
         <input type="text" id="lign" name="lign">
@@ -61,7 +61,7 @@ require_once("fonctions.php");
 </div> 
 <div class="input-form">
 <label for="password" id="text">Confirmer Password</label>
-<input type="password" id="confirm_password" name="password" error="error-5">
+<input type="password" id="confirm_password" name="confirmpassword" error="error-5">
 <div class="error-form" id="error-5"></div>
 </div> 
 
@@ -77,6 +77,7 @@ require_once("fonctions.php");
       <div class="avatar_joueur">
           <img id="img">
       </div>
+
       
    </div>
    </form>  
@@ -87,6 +88,7 @@ require_once("fonctions.php");
 </body>
 </html>
 
-<script src="function.js">
+<!--Utilisation d’un fichier externe-->
+<script src="function.js"></script>
  
-</script>
+

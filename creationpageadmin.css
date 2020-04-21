@@ -463,3 +463,21 @@ width: 40%;
         border-radius: 10px;
         color:gray;
     }
+    .precedent{
+        color: black;
+        position: relative;
+        font-size: 33px;
+        float: left;
+        border-radius: 10px;
+        border: 1px solid black;
+        background-color: rgb(43, 160, 150);
+    }
+    .suivant{
+        color: black;
+        position: relative;
+        font-size: 33px;
+        float: right;
+        border-radius: 10px;
+        border: 1px solid black;
+        background-color: rgb(43, 160, 150);
+    }

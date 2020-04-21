@@ -97,6 +97,5 @@ if(isset($_GET["page"])){
 </div>
  </div>
 </div>
-<!--<script src="Ajaxhr.js"></script>-->
 </body>
 </html>
