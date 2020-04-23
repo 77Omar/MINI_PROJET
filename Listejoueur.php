@@ -66,7 +66,6 @@ for($j=$IndiceDebut; $j<=$IndiceFin; $j++){
    echo "<td>".$tab[$j]['score']."</td>";
    echo"</tr>";
   }
- 
 }
 echo"</table>";
 if($numberpage > 1){

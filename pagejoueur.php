@@ -5,6 +5,20 @@ if(!isset($_SESSION['prenom'])){
     header("Location:pageconnexion.php");
     exit;
 }
+
+$tab_json = json_decode(file_get_contents("fichierJSON.json"),true);
+    foreach ($tab_json as $value){
+     if($value['role']=="player"){
+      $tab[]= array(
+        "prenom"=> $value["prenom"],
+        "nom"=> $value["nom"],
+        "score"=> $value["score"]
+      );
+     }
+   }
+//Tri la colonne score par ordre décroissant 
+$columns = array_column($tab,"score");
+array_multisort($columns, SORT_DESC,$tab);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,8 +58,34 @@ if(!isset($_SESSION['prenom'])){
 
    <div class="menu">     
    <form action="" method="post" id="">
+   <div class="interface">
+       <button><p>Top scores</p></button>
+       <button class="scor">Mon meilleur score</button>
+       
+   <?php
+  echo"<table>";
+  echo"<tr>";
+  
+  echo"</tr>";
+
+for($i=0; $i<5; $i++){
+ if(array_key_exists($i,$tab)){
+   echo"<tr>";
+   echo "<td>".$tab[$i]['prenom'].' '.$tab[$i]['nom']."</td>";
+   echo "<td>".$tab[$i]['score']."</td>";
+   echo"</tr>";
+  }
  
-    
+}
+echo"</table>";
+?>
+   </div>
+   <div class="right">
+     <div class="textera">
+
+     </div>
+   </div>
+
    </form>
      
    </div>
