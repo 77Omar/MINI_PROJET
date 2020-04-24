@@ -57,7 +57,8 @@ if(isset($_POST['btn'])){
 <label for="avatar" class="avatare">Avatar</label>
 <!--<p><input type="submit" value="Choisir un fichier" placeholder="Choisir un fichier" class="connexion" name="btn"></p>-->
 <p><input type="submit" value="Créer compte" placeholder="Créer compte" class="connection" name="btn"></p><br>
-<input type="file" name="avatare" id="avatare" accept=".jpg, .JPG, .jpeg, .png, .PNG"
+<div class="error-form" id="error-6"></div>
+<input type="file" name="avatare" id="avatare" error="error-6" accept=".jpg, .JPG, .jpeg, .png, .PNG"
 onchange="document.getElementById('img').src=window.URL.createObjectURL(this.files[0])">
 </br> 
 </div>

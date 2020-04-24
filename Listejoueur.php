@@ -37,9 +37,9 @@ array_multisort($columns, SORT_DESC,$tab);
 <?php
  
   $nbr_elements=count($tab);
-  $nbr_par_page=2; 
+  $nbr_par_page=10; 
   $nbr_de_page=ceil($nbr_elements/$nbr_par_page);
-  
+   
 
 if(isset($_GET['pages'])){
    $numberpage=$_GET['pages'];
@@ -63,7 +63,7 @@ for($j=$IndiceDebut; $j<=$IndiceFin; $j++){
    echo"<tr>";
    echo "<td>".$tab[$j]['prenom']."</td>";
    echo "<td>".$tab[$j]['nom']."</td>";
-   echo "<td>".$tab[$j]['score']."</td>";
+   echo "<td>".$tab[$j]['score']."pts"."</td>";
    echo"</tr>";
   }
 }

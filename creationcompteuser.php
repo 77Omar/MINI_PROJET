@@ -70,7 +70,8 @@ require_once("fonctions.php");
   <div class="true">
   <label for="avatar" class="avatar">Avatar</label>
   <p><input type="submit" value="Créer compte" placeholder="Créer compte" class="connection" name="btn"></p><br>
-    <input type="file" name="avatare" id="avatar" accept=".jpg, .JPG, .jpeg, .png, .PNG"
+  <div class="error-form" id="error-6"></div>
+    <input type="file" name="avatare" id="avatar" error="error-6" accept=".jpg, .JPG, .jpeg, .png, .PNG"
     onchange="document.getElementById('img').src=window.URL.createObjectURL(this.files[0])">
   </div>
   <div class="right_slide">

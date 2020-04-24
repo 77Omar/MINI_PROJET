@@ -15,7 +15,7 @@
     background-clip: white;
     margin-left: 12%;
     border-radius: 16px;
-    margin-top: 3%;
+    margin-top: 5%;
 }
 .bloc{
     width: 104%;
@@ -64,7 +64,7 @@
     background-color: rgb(135, 203, 235);
     width: 100%;
     margin-left: 0px;
-    height: 85px;
+    height: 120px;
     text-align: center;
 }
 .two h2{
@@ -137,7 +137,7 @@ font-size: 23px;
    
 }
 .interface{
-    border: 2px solid silver;
+    border: 3px solid silver;
     border-radius: 10px;
     width: 35%;
     height: 450px;
@@ -163,14 +163,17 @@ font-size: 23px;
     color: rgb(135, 220, 235);
     top: 0px;
     position: relative;
-    height: 50px;
+    height: 42px;
     border: none;
 }
 td{
     width: 200px;
     height: 40px;
     font-size: 30px;
-    color:black;
+    color: black;
+    top: 20px;
+    position: relative;
+    
 }
 .right{
     float: right;
@@ -196,4 +199,19 @@ td{
     float: right;
     top: 7px;
     background-color: whitesmoke;
+}
+a{
+    float: left;
+    text-decoration: none;
+    height: 42px;
+}
+#top_score{
+    display: none;
+    margin-top: 45px;
+    height: 55%;
+}
+#meilleure{
+    display: none;
+    margin-top: 65px;
+    font-size: 22px;
 }
