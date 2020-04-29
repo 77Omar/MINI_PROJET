@@ -37,7 +37,7 @@ array_multisort($columns, SORT_DESC,$tab);
 <?php
  
   $nbr_elements=count($tab);
-  $nbr_par_page=10; 
+  $nbr_par_page=3; 
   $nbr_de_page=ceil($nbr_elements/$nbr_par_page);
    
 

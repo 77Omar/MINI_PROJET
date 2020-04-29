@@ -76,5 +76,6 @@ onchange="document.getElementById('img').src=window.URL.createObjectURL(this.fil
 </html>
 
 <script src="function.js"></script>
+
  
 
