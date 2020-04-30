@@ -5,7 +5,7 @@ if(!isset($_SESSION['prenom'])){
     header("Location:pageconnexion.php");
     exit;
 }
-
+$tab=[];
 $tab_json = json_decode(file_get_contents("fichierJSON.json"),true);
     foreach ($tab_json as $value){
      if($value['role']=="player"){
@@ -24,6 +24,7 @@ foreach($tab as $value){
     $meilleure_score=$value['score'];
   }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +63,7 @@ foreach($tab as $value){
        </div>
 
    <div class="menu">     
-   <form action="" method="post" >
+
    <div class="interface">
      <a href="#" id="topscr1"><p>Top scores</p></a>
      <a href="#" class="scor" id="topscr2">Mon meilleur score</a>
@@ -93,15 +94,15 @@ echo"</table>";
    ?>
 </div>
 </div>
+       <div class="right">
+           <div class="textera">
 
+           </div>
+       </div>
    </div>
-   <div class="right">
-     <div class="textera">
 
-     </div>
-   </div>
 
-   </form>
+
      
    </div>
   </div>
