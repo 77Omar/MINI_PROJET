@@ -31,9 +31,8 @@ if(isset($_POST['questions']) && isset($_POST['points']) && isset($_POST['type_r
             if($_POST['radio']=="reponse".$i){
              $repvalid[]= $_POST['reponse'.$i];
             }
-        }
-        
-    }
+        }   
+     }
    }
 
  //parametre doit etre par ordre
