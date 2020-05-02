@@ -1,6 +1,7 @@
 <?php
 $numberpage="";
 $nbr_de_page="";
+$score=0;
 $Tab_Json=json_decode(file_get_contents("question.json"),true);
 $Tab=[];
 foreach($Tab_Json as $question){
@@ -122,11 +123,16 @@ echo"</table>";
                 echo 'Question:'.$numberpage.'/'.$nbr_de_page.'<br>';
                for($i=$IndiceDebut; $i<=$IndiceFin; $i++) {
                    echo $Tab[$i]["questions"] . "<br/></br>";
+                   $score=$Tab[$i]["points"];
                }
                ?>
            </div>
            <br>
            <div class="Reponses">
+               <div class="score">
+                   <input type="text" value="<?=$score?>pts" name="point" class="point">
+               </div>
+
            <?php
            echo"<div class='answer'>" ;
            for($i=$IndiceDebut; $i<=$IndiceFin; $i++){
@@ -173,15 +179,9 @@ echo "</div>";
            </div>
        </div>
    </div>
-           <div class="textera">
 
-           </div>
        </div>
    </div>
-
-           <div class="textera">
-
-           </div>
        </div>
    </div>
 

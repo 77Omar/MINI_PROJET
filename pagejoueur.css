@@ -247,3 +247,13 @@ a{
 .answer{
     margin-left: 210px;
 }
+.score{
+float: right;
+}
+.point{
+    background-color:whitesmoke;
+    margin-right: 16px;
+    width: 61px;
+    height: 50px;
+    font-size: 22px;
+}
