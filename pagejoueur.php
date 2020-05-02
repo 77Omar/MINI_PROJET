@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 <?php
 $numberpage="";
 $nbr_de_page="";
@@ -10,9 +8,6 @@ foreach($Tab_Json as $question){
 }
 
 ?>
-
-=======
->>>>>>> origin/master
 <?php
 session_start();
 if(!isset($_SESSION['prenom'])){
@@ -40,8 +35,6 @@ foreach($tab as $value){
   }
 }
 
-<<<<<<< HEAD
-
 $nbr_elements=count($tab);
 $nbr_par_page=1;
 $nbr_de_page=ceil($nbr_elements/$nbr_par_page);
@@ -53,8 +46,6 @@ if(isset($_GET['pages'])){
 $IndiceDebut=($numberpage-1) * $nbr_par_page;
 $IndiceFin=$IndiceDebut+$nbr_par_page-1;
 
-=======
->>>>>>> origin/master
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -125,7 +116,6 @@ echo"</table>";
 </div>
 </div>
        <div class="right">
-<<<<<<< HEAD
 
            <div class="textera">
                <?php
@@ -189,19 +179,12 @@ echo "</div>";
        </div>
    </div>
 
-
-
-=======
            <div class="textera">
 
            </div>
        </div>
    </div>
 
-
-
->>>>>>> origin/master
-     
    </div>
   </div>
  </div>
