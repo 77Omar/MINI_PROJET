@@ -1,11 +1,22 @@
 <?php
+$numberpage="";
+$nbr_de_page="";
+$Tab_Json=json_decode(file_get_contents("question.json"),true);
+$Tab=[];
+foreach($Tab_Json as $question){
+    $Tab[]=$question;
+}
+
+?>
+
+<?php
 session_start();
 if(!isset($_SESSION['prenom'])){
     echo "Vous n'etes pas connectés!";
     header("Location:pageconnexion.php");
     exit;
 }
-
+$tab=[];
 $tab_json = json_decode(file_get_contents("fichierJSON.json"),true);
     foreach ($tab_json as $value){
      if($value['role']=="player"){
@@ -24,6 +35,18 @@ foreach($tab as $value){
     $meilleure_score=$value['score'];
   }
 }
+
+
+$nbr_elements=count($tab);
+$nbr_par_page=1;
+$nbr_de_page=ceil($nbr_elements/$nbr_par_page);
+if(isset($_GET['pages'])){
+    $numberpage=$_GET['pages'];
+}else{
+    $numberpage=1;
+}
+$IndiceDebut=($numberpage-1) * $nbr_par_page;
+$IndiceFin=$IndiceDebut+$nbr_par_page-1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +85,7 @@ foreach($tab as $value){
        </div>
 
    <div class="menu">     
-   <form action="" method="post" >
+
    <div class="interface">
      <a href="#" id="topscr1"><p>Top scores</p></a>
      <a href="#" class="scor" id="topscr2">Mon meilleur score</a>
@@ -93,15 +116,66 @@ echo"</table>";
    ?>
 </div>
 </div>
+       <div class="right">
 
+           <div class="textera">
+               <?php
+                echo 'Question:'.$numberpage.'/'.$nbr_de_page.'<br>';
+               for($i=$IndiceDebut; $i<=$IndiceFin; $i++) {
+                   echo $Tab[$i]["questions"] . "<br/></br>";
+               }
+               ?>
+           </div>
+           <br>
+           <div class="Reponses">
+           <?php
+           echo"<div class='answer'>" ;
+           for($i=$IndiceDebut; $i<=$IndiceFin; $i++){
+               if(array_key_exists($i,$Tab)){
+                   foreach($Tab[$i]['reponse'] as $value){
+                       if($Tab[$i]['type_reponse']=="Texte"){
+                           echo"<br/>";
+                           echo "<input type='text' value='".$value."' name='' disabled>";
+                           echo"<br/>";
+                       }
+                       elseif($Tab[$i]['type_reponse']=="choix_multiple"){
+                           if(in_array($value,$Tab[$i]['reponses_valides'])){
+                               echo "<input type='checkbox' class='check' disabled name=''>".$value;
+                               echo"<br/>";
+                           }else{
+                               echo "<input type='checkbox' class='check' disabled name=''>".$value;
+                               echo"<br/>";
+                           }
+                       }else{
+                           if(in_array($value,$Tab[$i]['reponses_valides'])){
+                               echo "<input type='radio'  class='check' disabled name=''>".$value;
+                               echo"<br/>";
+                           }else{
+                               echo "<input type='radio'  class='check' disabled name=''>".$value;
+                               echo"<br/>";
+                           }
+
+                       }
+
+                   }
+
+               }
+          }
+echo "</div>";
+           if($numberpage > 1){
+               $precedent = $numberpage-1;
+               echo '</br><a class="precedent" href="pagejoueur.php?page=pagejoueur&pages='.$precedent.' ">Precedent</a> &nbsp;';
+           }
+           if($numberpage < $nbr_de_page){
+               $suivant= $numberpage+1;
+               echo '<a class="suivant" href="pagejoueur.php?page=pagejoueur&pages='.$suivant.' ">Suivant</a> &nbsp;';
+           }
+           ?>
+           </div>
+       </div>
    </div>
-   <div class="right">
-     <div class="textera">
 
-     </div>
-   </div>
 
-   </form>
      
    </div>
   </div>
@@ -116,8 +190,8 @@ echo"</table>";
   let topscr= document.getElementById('topscr2');
   topscr1.addEventListener("click", function(){
     top_score.style.display="block";
-    top_score.style.backgroundColor="cadetblue";
-    topscr1.style.backgroundColor="cadetblue";
+    top_score.style.backgroundColor="rgb(135, 203, 235)";
+    topscr1.style.backgroundColor="rgb(135, 203, 235)";
     if(meilleure.style.display=="block"){
       meilleure.style.display="none";
       topscr.style.backgroundColor="";
@@ -131,8 +205,8 @@ echo"</table>";
   let topsc=document.getElementById('topscr1');
   topscr2.addEventListener("click", function(){
     meilleur.style.display="block";
-    meilleur.style.backgroundColor="beige";
-    topscr2.style.backgroundColor="beige";
+    meilleur.style.backgroundColor="rgb(43, 160, 150)";
+    topscr2.style.backgroundColor="rgb(43, 160, 150)";
     if(top_scor.style.display=="block"){
       top_scor.style.display="none";
       topsc.style.backgroundColor="";

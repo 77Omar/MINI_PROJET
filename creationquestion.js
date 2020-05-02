@@ -65,14 +65,16 @@ for(form of creer){
 }
 
 function texte(){
+  nbrRow++;
   let id_rep=document.getElementById('select');
   let divInput = document.getElementById('inputs');
   let newInput = document.createElement('div');
   newInput.setAttribute('class','form');
-
+  newInput.setAttribute('id','row_'+nbrRow);
    if(id_rep.options[id_rep.selectedIndex].value==="Texte"){
     newInput.innerHTML=`<div><label id='reponses'> Reponse</label>
-    <input class='id_reponsetext' type='text' name='reponse'/>`;
+    <input class='id_reponsetext' type='text' name='reponse'/>
+    <button type='button' class='deletes'  onclick='onDeleteInput(${nbrRow})'><img src='images/ic-supprimer.png'></img></button>`;
     
    }
    divInput.appendChild(newInput);

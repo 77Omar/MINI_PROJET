@@ -54,19 +54,32 @@ $Tab_Json=json_decode(file_get_contents("question.json"),true);
              echo ($i+1).".".$Tab[$i]["questions"]."<br/></br>";
              foreach($Tab[$i]['reponse'] as $value){
                  if($Tab[$i]['type_reponse']=="Texte"){
-                     echo "<input type='text' name=''>";
-                     echo"<br/>";
-                 }elseif($Tab[$i]['type_reponse']=="choix_multiple"){
-                     echo "<input type='checkbox' name=''>".$value;
-                     echo"<br/>";
-                 }else{
-                     echo "<input type='radio' name=''>".$value;
+                     echo "<input type='text' value='".$value."' name='' disabled>";
                      echo"<br/>";
                  }
-             }
-             echo "<hr>";
+                 elseif($Tab[$i]['type_reponse']=="choix_multiple"){
+                   if(in_array($value,$Tab[$i]['reponses_valides'])){
+                    echo "<input type='checkbox' disabled name='' checked>".$value;
+                    echo"<br/>";
+                   }else{
+                    echo "<input type='checkbox' disabled name=''>".$value;
+                    echo"<br/>";
+                  }
+                  }else{
+                   if(in_array($value,$Tab[$i]['reponses_valides'])){
+                    echo "<input type='radio' disabled name='' checked>".$value;
+                    echo"<br/>";
+                   }else{
+                    echo "<input type='radio' disabled name=''>".$value;
+                    echo"<br/>";
+                  }
+                   
+                 }  
+                 
+              }
+              echo "<hr>";
+            }
          }
-       }
      
        if($numberpage > 1){
          $precedent = $numberpage-1;

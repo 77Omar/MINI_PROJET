@@ -522,9 +522,19 @@ width: 40%;
         position: relative;
         margin-bottom: 0px;
     }
+    .delete{
+        margin-left: 464px;
+        top: -14px;
+        position: relative;
+    }
+    .deletes{
+        margin-left: 420px;
+        top: -24px;
+        position: relative;
+    }
     .id_reponsetext{
         width: 64%;
-        height: 70px;
+        height: 60px;
         top: 20px;
         position: relative;
 
@@ -542,8 +552,3 @@ width: 40%;
         top: 30px;
         position: relative;
     }
-.delete{
-    margin-left: 464px;
-    top: -14px;
-    position: relative;
-}
