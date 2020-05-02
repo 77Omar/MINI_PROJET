@@ -37,7 +37,6 @@ foreach($tab as $value){
   }
 }
 
-<<<<<<< HEAD
 
 $nbr_elements=count($tab);
 $nbr_par_page=1;
@@ -49,8 +48,7 @@ if(isset($_GET['pages'])){
 }
 $IndiceDebut=($numberpage-1) * $nbr_par_page;
 $IndiceFin=$IndiceDebut+$nbr_par_page-1;
-=======
->>>>>>> bbd14f96987257ee1a85c100423924d005f6fbea
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -121,7 +119,6 @@ echo"</table>";
 </div>
 </div>
        <div class="right">
-<<<<<<< HEAD
 
            <div class="textera">
                <?php
@@ -179,14 +176,12 @@ echo "</div>";
            </div>
        </div>
    </div>
-=======
            <div class="textera">
 
            </div>
        </div>
    </div>
 
->>>>>>> bbd14f96987257ee1a85c100423924d005f6fbea
 
 
      

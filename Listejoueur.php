@@ -1,5 +1,6 @@
 <?php
  $tab_json = json_decode(file_get_contents("fichierJSON.json"),true);
+ $tab=[];
 if(isset($_GET['page'])){
   if($_GET['page']=="Listejoueur"){
     foreach ($tab_json as $value){
