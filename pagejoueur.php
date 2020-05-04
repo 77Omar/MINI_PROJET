@@ -130,7 +130,7 @@ echo"</table>";
            <br>
            <div class="Reponses">
                <div class="score">
-                   <input type="text" value="<?=$score?>pts" name="point" class="point">
+                   <input type="text" value="<?=$score?>pts" name="point" class="point"  disabled>
                </div>
 
            <?php

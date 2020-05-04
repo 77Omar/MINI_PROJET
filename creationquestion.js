@@ -45,7 +45,7 @@ for(form of creer){
     newInput.setAttribute('class','form');
     newInput.setAttribute('id','row_'+nbrRow);
    if(id_rep.options[id_rep.selectedIndex].value==="choix_multiple"){
-    newInput.innerHTML=`<div><label id='reponses'> Reponse</label>
+       newInput.innerHTML=`<div><label id='reponses'> Reponse</label>
     <input class='id_reponse' type='text' name='reponse${nbrRow}'/>
     <input class='checkbox' type='checkbox' name='checkbox${nbrRow}'/></div>
     <button type='button' class='delete'  onclick='onDeleteInput(${nbrRow})'><img src='images/ic-supprimer.png'></img></button>`;

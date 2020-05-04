@@ -152,7 +152,7 @@ font-size: 23px;
     position: relative;
     top: -16px;
     height: 1px;
-    color: silver;
+    color: seagreen;
     width: 201px;
     background-color: white;
 }
@@ -239,10 +239,11 @@ a{
     margin-left: 1px;
 }
 .check{
+    position: relative;
     width: 18px;
     height: 18px;
-    color:darkcyan;
-    background-color: darkcyan;
+    top: 3px;
+
 }
 .answer{
     margin-left: 210px;

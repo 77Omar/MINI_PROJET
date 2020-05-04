@@ -5,7 +5,7 @@ if(isset($_POST['envoie'])){
     $area="";
     $point="";
     $typ_rep="";
-    $reponse="";
+    $reponse=[];
     $message="";
     $repvalid=[];
 }
@@ -79,9 +79,9 @@ if(isset($_POST['questions']) && isset($_POST['points']) && isset($_POST['type_r
     
     </div>
     <input type="hidden" name="numb_input" id="valeur">
-
  </div>
     <input type="submit" value="Enregistrer" class="button" name="envoie">
+
 </div>
 
 </form>

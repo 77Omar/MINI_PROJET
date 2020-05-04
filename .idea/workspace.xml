@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="38ddc76a-a686-4293-9517-6723a636cf99" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creationpageadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/creationpageadmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creationquestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/creationquestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creerquestion.php" beforeDir="false" afterPath="$PROJECT_DIR$/creerquestion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pagejoueur.css" beforeDir="false" afterPath="$PROJECT_DIR$/pagejoueur.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pagejoueur.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagejoueur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/question.json" beforeDir="false" afterPath="$PROJECT_DIR$/question.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +49,9 @@
       <workItem from="1588262836815" duration="796000" />
       <workItem from="1588265207449" duration="955000" />
       <workItem from="1588268580457" duration="374000" />
+      <workItem from="1588461274943" duration="3463000" />
+      <workItem from="1588545164387" duration="2032000" />
+      <workItem from="1588604849072" duration="4969000" />
     </task>
     <servers />
   </component>
@@ -72,9 +79,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1588263046083" />
-    <state x="348" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1588262845885">
+    <state x="348" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1588604947133">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="348" y="168" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1588262845885" />
+    <state x="348" y="168" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1588604947133" />
   </component>
 </project>
