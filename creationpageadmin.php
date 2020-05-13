@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['prenom'])){
     echo "Vous n'etes pas connectés!";
-    header("Location:pageconnexion.php");
+    header("Location:index.php");
     exit;
     
 }

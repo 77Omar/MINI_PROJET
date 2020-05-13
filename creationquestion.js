@@ -84,6 +84,7 @@ function texte(){
 function onDeleteInput(n){
    let target = document.getElementById('row_'+n);
    setTimeout(function() {
+       
     target.remove();
    },2000)
    fadeOut('row_'+n);
@@ -94,6 +95,7 @@ function fadeOut(idTarget){
     if (!target.style.opacity) {
          target.style.opacity = 1;
     }
+
     if (target.style.opacity>0) {
       target.style.opacity-=0.1;
     }else{

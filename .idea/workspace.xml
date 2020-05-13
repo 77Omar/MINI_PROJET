@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38ddc76a-a686-4293-9517-6723a636cf99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Traitement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/function.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parametre.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creationpageadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/creationpageadmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Deconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Deconnexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listequestion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Listequestion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creationpageadmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/creationpageadmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creationquestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/creationquestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creerquestion.php" beforeDir="false" afterPath="$PROJECT_DIR$/creerquestion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pagejoueur.css" beforeDir="false" afterPath="$PROJECT_DIR$/pagejoueur.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pagejoueur.php" beforeDir="false" afterPath="$PROJECT_DIR$/pagejoueur.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/question.json" beforeDir="false" afterPath="$PROJECT_DIR$/question.json" afterDir="false" />
@@ -51,7 +56,23 @@
       <workItem from="1588268580457" duration="374000" />
       <workItem from="1588461274943" duration="3463000" />
       <workItem from="1588545164387" duration="2032000" />
-      <workItem from="1588604849072" duration="4969000" />
+      <workItem from="1588604849072" duration="6838000" />
+      <workItem from="1588629873560" duration="11873000" />
+      <workItem from="1588690187138" duration="11606000" />
+      <workItem from="1588711117870" duration="17277000" />
+      <workItem from="1588776143999" duration="12181000" />
+      <workItem from="1588809718718" duration="7521000" />
+      <workItem from="1588845931572" duration="548000" />
+      <workItem from="1588865357264" duration="6561000" />
+      <workItem from="1588890132276" duration="16886000" />
+      <workItem from="1588976062088" duration="6038000" />
+      <workItem from="1589038942537" duration="9274000" />
+      <workItem from="1589064831754" duration="9024000" />
+      <workItem from="1589126714668" duration="1100000" />
+      <workItem from="1589134295484" duration="9466000" />
+      <workItem from="1589277529414" duration="1124000" />
+      <workItem from="1589318900655" duration="1519000" />
+      <workItem from="1589330185895" duration="692000" />
     </task>
     <servers />
   </component>
@@ -71,17 +92,36 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="348" y="0" key="#PHP/0.0.1280.680@0.0.1280.680" timestamp="1588263304844" />
-    <state x="420" y="94" key="FileChooserDialogImpl" timestamp="1588263294984">
+    <state x="420" y="94" key="FileChooserDialogImpl" timestamp="1588690440098">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588263294984" />
+    <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588690440098" />
+    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1589040603201">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1589040603201" />
     <state x="144" y="0" key="SettingsEditor" timestamp="1588263046083">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1588263046083" />
-    <state x="348" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1588604947133">
+    <state x="348" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1589330201595">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="348" y="168" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1588604947133" />
+    <state x="348" y="168" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1589330201595" />
+    <state x="0" y="0" width="739" height="680" key="find.popup" timestamp="1588718325492">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" width="739" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1588718325492" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/creationpageadmin.php</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

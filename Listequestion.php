@@ -1,9 +1,31 @@
 <?php
+$message="";
+$nbr=0;
 $Tab_Json=json_decode(file_get_contents("question.json"),true);
  $Tab=[];
  foreach($Tab_Json as $question){
    $Tab[]=$question;
  }
+
+ if(isset($_POST['btn_q'])){
+     $nbre=$_POST['nbre_question'];
+     if(!is_numeric($nbre)){
+         echo '<span id="message" style="color:red">Entrer un nombre svp!</span>';
+     }elseif($nbre<5){
+         echo '<span id="message" style="color:red">Entrer un nombre superieur ou égale à 5 svp!</span>';
+     }else{
+         $jsonquestion=json_decode(file_get_contents("parametre.json"),true);
+         $Tabb=array(
+                 "nbq"=>$nbre
+         );
+         $jsonquestion=$Tabb;
+         $jsonquestion= json_encode($jsonquestion);
+         file_put_contents("parametre.json", $jsonquestion);
+
+     }
+ }
+$jsonquestion=json_decode(file_get_contents("parametre.json"),true);
+$nbr= $jsonquestion['nbq'];
 
 ?>
 <!DOCTYPE html>
@@ -15,29 +37,19 @@ $Tab_Json=json_decode(file_get_contents("question.json"),true);
     <title>Document</title>
 </head>
 <body>
-<form action="" method="post">
+<form action="" method="post" id="form-connexion">
 <!--<div class="leftmenu">-->
     <div class="border">
         <label for="" id="nbre">Nbre de question/jeu</label>
-        <input type="number" class="number" name="nbre_question"> 
-        <button type="submit" class="ok" name="btn" id="">OK</button>
+        <input type="number" class="number" name="nbre_question" errore="errore-1" value="<?=$nbr?>">
+        <button type="submit" class="ok" name="btn_q" value="">OK</button>
+        <div class="errore-form1" id="errore-1"></div>
     </div>
   <div class="right">
   <?php
-  if(isset($_POST['btn'])){
-    $Nbre_de_question=$_POST['nbre_question'];
-    if(empty($Nbre_de_question)){
-        echo "Veuillez entre un nombre svp!";
-    }elseif($Nbre_de_question<=0){
-      echo "veuillez entrez un nombre positif svp!";
-    }
-     else{
-         $_SESSION['Nbre']=$Nbre_de_question;
-         }
-    }
-    if(!empty($_SESSION['Nbre'])){
+
       $nbr_elements=count($Tab);
-      $nbr_par_page=$_SESSION['Nbre']; 
+      $nbr_par_page=5;
       $nbr_de_page=ceil($nbr_elements/$nbr_par_page);
        
      if(isset($_GET['pages'])){
@@ -83,14 +95,14 @@ $Tab_Json=json_decode(file_get_contents("question.json"),true);
      
        if($numberpage > 1){
          $precedent = $numberpage-1;
-         echo '</br><a class="precedent" href="creationpageadmin.php?page=Listequestion&pages='.$precedent.' ">Precedent</a> &nbsp;';
+         echo '</br><a class="precedent" name="precedent" href="creationpageadmin.php?page=Listequestion&pages='.$precedent.' ">Precedent</a> &nbsp;';
        }
        if($numberpage < $nbr_de_page){
          $suivant= $numberpage+1;
-         echo '<a class="suivant" href="creationpageadmin.php?page=Listequestion&pages='.$suivant.' ">Suivant</a> &nbsp;';
+         echo '<a class="suivant" name="suivant" href="creationpageadmin.php?page=Listequestion&pages='.$suivant.' ">Suivant</a> &nbsp;';
        }
 
-    }
+    //}
         
 
   ?>
